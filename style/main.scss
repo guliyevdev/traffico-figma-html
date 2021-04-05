@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap');// reset css
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: #FEF8F5;
+    font-size: 10px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+// reset css
+// default variable
+$theme-colors: (
+    "info": #EE4D47,
+);
+$default-border-space: 20.49em;
+
+.h2 {
+    color: map-get($theme-colors, "info" );
+    font-size: 2.4em;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    line-height: 4em;
+}
+.btn {
+    font-size: 1.6em;
+    padding: 16px 24px 17px 24px;
+}
+.btn-info {
+    background-color:map-get($theme-colors, "info" );
+}
+%ilustration-shared {
+    position: absolute;
+    z-index: -1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.container {
+    padding: 0 $default-border-space;
+}
+.illustration {
+    max-width: 1100px;
+    width: calc((1285%/1600)*100);
+    height: 900px;
+    position: absolute;
+    .illustration-background {
+        @extend %ilustration-shared;
+        width: 100%;
+        height: 900px;
+        background-image: url('../image/theme/BG.svg');
+    }
+    .building {
+        @extend %ilustration-shared;
+        width: 100%;
+        height: 900px;
+        background-image: url('../image/theme/Mask\ Group.svg');
+    }
+    .truck {
+        @extend %ilustration-shared;
+        max-width: 811px;
+        width: 46.6%;
+        height: 394.55px;
+        margin-top: 61%;
+        background-image: url('../image/theme/mobel.svg');
+        z-index: -1;
+        animation-duration: 2.2s;
+        animation-name: slideright;
+    }
+    .two-person {
+        @extend %ilustration-shared;
+        max-width: 365px;
+        width: 28.4%;
+        height: 394.55px;
+        margin:34.5% 0 0 calc((982.5%/1600)*100);
+        height: 600px;
+        background-image: url('../image/theme/persons.svg');
+    }
+    .half-bounce-one {
+        @extend %ilustration-shared;
+        max-width: 154px;
+        width: calc((179%/1600)*100);
+        height: 80px;
+        z-index: -2;
+        margin:59.1% 0 0 37%;
+        background-image: url('../image/theme/Vector-2.svg');
+    }
+    .half-bounce-two {
+        @extend %ilustration-shared;
+        max-width: 240px;
+        width: calc((260%/1600)*100);
+        height: 80px;
+        z-index: -2;
+        margin:58% 0 0 43%;
+        background-image: url('../image/theme/Vector-3.svg');
+    }
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $default-border-space;
+    align-items: flex-end;
+    color: white;
+    div {
+        font-family:  DM Serif Display;
+        margin: 3.3em 0;
+        .logo-text {
+            font-size: 2.732em;
+        }
+    }
+    ul {
+        display: flex;
+        li {
+            display: inline-flex;
+            align-items: center;
+            padding:1em 10em 1em 0;
+
+            a {
+                font-size: 1.6em;
+            }
+        }
+    }
+}
+.hero-container {
+    color: white;
+    .hero-text {
+        justify-content: flex-start;
+        max-width: 741px;
+        width: calc(741%*100 / 1120);
+        h1 {
+            font-family: DM Serif Display;
+            font-size: 8.5em;
+            line-height: 100%;
+        }
+    }
+    a {
+        max-width: 220px;
+        display: inline-block;
+        margin-top: 5em;
+    }
+   
+}
+%container-text {
+    font-size: 1.8em;
+    font-weight: light;
+    font-family: 'Rubik', sans-serif;
+    line-height: 31px;
+}
+.clearfix-mt-max {
+    margin-top: 58em;
+}
+.container-about-apply {
+    display: flex;
+    max-width: 1200;
+    margin-top: 12em;
+    .about-text {
+        width: calc((570%/1170.8)*100);
+        margin-top: 6.3%;
+        h6 {
+            max-width: 470px;
+            margin-top: 3.5em;
+            width: calc((470%/570)*100);
+            @extend %container-text;
+        }
+        .how-do-you {
+            background-color: #FCDDD4;
+            border-left: 10px solid #ED4D47;
+            padding: 3em 5.5em;
+            margin-top: 5.5em;
+            p {
+                font-size: 2.4em;
+            }
+        }
+    }
+    .about-image {
+        width: calc((570%/1170.8)*100);
+        img {
+            width: 100%;
+        }
+    }
+    
+}
+
+//animation
+@keyframes slideright {
+    from {
+      margin-left: 62%;
+      width: calc((600%/1285)*100);
+    }
+  
+    to {
+      margin-left: 0%;
+      width: calc((600%/1285)*100);
+    }
+  }
+//animation

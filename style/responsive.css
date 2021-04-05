@@ -1,0 +1,65 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 6px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .about-image-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-image {
+    display: none;
+  }
+  .about-text {
+    width: 100% !important;
+  }
+  .about-text .about-title {
+    text-align: center;
+  }
+  .about-text h6 {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 9px;
+  }
+  .hero-text {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-top: 6em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  header {
+    padding: 0 5em;
+  }
+  .container {
+    padding: 0 5em;
+  }
+  .illustration {
+    width: 100%;
+  }
+  .container-about-apply .about-text {
+    margin-top: 0;
+  }
+  .container-about-apply .about-text h6 {
+    margin-top: 0;
+  }
+  .container-about-apply .about-text .how-do-you {
+    margin-top: 2em;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
